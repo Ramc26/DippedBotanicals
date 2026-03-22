@@ -1,6 +1,7 @@
 {
-  "installCommand": "echo 'Static site — skip npm install'",
-  "buildCommand": "echo 'Static site — skip compile'",
+  "installCommand": "true",
+  "buildCommand": "mkdir -p dist && cp *.html dist/",
+  "outputDirectory": "dist",
   "headers": [
     {
       "source": "/(.*)",
