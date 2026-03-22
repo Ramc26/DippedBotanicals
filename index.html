@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Blooms — Hyderabad · Fruit artistry & edible sculptures</title>
+  <meta name="description" content="Berry Blooms: Nature’s Candy, Reimagined—seasonal fruit as canvas, Belgian chocolate, gift-ready bouquets. Build-Your-Own-Bloom, smart logistics, full-stack ops. Hyderabad · Ravali Cherukuri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Quintessential&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDFBF7',
+            cocoa: '#432818',
+            crust: '#D4A373',
+            glow: '#F2E8CF',
+            surface: '#FFFFFF',
+          },
+          fontFamily: {
+            display: ['Quintessential', 'cursive'],
+            sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            card: '28px',
+            pill: '100px',
+          },
+          boxShadow: {
+            luxe: '0 20px 50px rgba(67, 40, 24, 0.05)',
+            luxeLg: '0 28px 60px rgba(67, 40, 24, 0.08)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --cream: #fdfbf7;
+      --cocoa: #432818;
+      --crust: #d4a373;
+      --glow: #f2e8cf;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: Outfit, Inter, system-ui, sans-serif; }
+    .font-display { font-family: Quintessential, cursive; }
+    .glass {
+      background: rgba(253, 251, 247, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .shadow-luxe { box-shadow: 0 20px 50px rgba(67, 40, 24, 0.05); }
+    .shadow-luxe-lg { box-shadow: 0 28px 60px rgba(67, 40, 24, 0.08); }
+    @keyframes float-soft {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes shimmer-ring {
+      0% { box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.45); }
+      70% { box-shadow: 0 0 0 12px rgba(212, 163, 115, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 163, 115, 0); }
+    }
+    @keyframes dots {
+      0%, 80%, 100% { opacity: 0.35; transform: scale(0.85); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+    .animate-float { animation: float-soft 6s ease-in-out infinite; }
+    .demo-ring { animation: shimmer-ring 2.2s ease-out infinite; }
+    .dot-pulse span:nth-child(1) { animation: dots 1.2s ease-in-out infinite; }
+    .dot-pulse span:nth-child(2) { animation: dots 1.2s ease-in-out 0.2s infinite; }
+    .dot-pulse span:nth-child(3) { animation: dots 1.2s ease-in-out 0.4s infinite; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-cream text-cocoa antialiased selection:bg-glow selection:text-cocoa">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/40 glass">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+      <a href="#" class="font-display text-3xl text-cocoa md:text-4xl tracking-wide">Berry Blooms</a>
+      <nav class="hidden items-center gap-8 text-sm font-medium text-cocoa/80 md:flex">
+        <a href="#experience" class="transition hover:text-crust">Experience</a>
+        <a href="#platform" class="transition hover:text-crust">Platform</a>
+        <a href="#kds" class="transition hover:text-crust">Fulfillment</a>
+      </nav>
+      <a href="#cta" class="rounded-pill bg-cocoa px-6 py-2.5 text-sm font-semibold text-cream shadow-luxe transition hover:scale-[1.02] hover:bg-cocoa/90 active:scale-[0.98]">Request deck</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden px-5 pb-24 pt-32 md:px-8 md:pb-32 md:pt-40">
+      <div class="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-glow/80 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -left-24 bottom-10 h-72 w-72 rounded-full bg-crust/15 blur-3xl" aria-hidden="true"></div>
+      <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div class="reveal">
+          <p class="mb-4 inline-flex items-center gap-2 rounded-pill bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-crust shadow-luxe">Hyderabad · Fruit artistry</p>
+          <h1 class="font-display text-5xl leading-tight text-cocoa sm:text-6xl md:text-7xl">Nature’s candy, <span class="text-crust">reimagined</span>.</h1>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-cocoa/75">Fresh, seasonal fruit as the canvas—Belgian chocolate dipping, precision carving, and adornments that turn produce into <strong class="font-semibold text-cocoa">edible sculptures</strong>. Guilt-free luxury for celebrations, parents, fitness-minded guests, and corporate gifting—built for an Instagram-first brand.</p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#platform" class="rounded-pill bg-crust px-8 py-3.5 text-sm font-semibold text-white shadow-luxe transition hover:scale-[1.02] hover:shadow-luxe-lg active:scale-[0.98]">Build-Your-Own-Bloom</a>
+            <a href="#experience" class="rounded-pill border border-cocoa/10 bg-white px-8 py-3.5 text-sm font-semibold text-cocoa shadow-luxe transition hover:scale-[1.02] active:scale-[0.98]">See the offer</a>
+          </div>
+          <dl class="mt-14 grid grid-cols-3 gap-6 border-t border-cocoa/10 pt-10 text-center sm:text-left">
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cocoa/50">Spotlight</dt>
+              <dd class="mt-1 font-display text-3xl text-crust">2h</dd>
+              <dd class="text-xs text-cocoa/60">Platter delivery</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cocoa/50">Custom</dt>
+              <dd class="mt-1 font-display text-3xl text-crust">24h</dd>
+              <dd class="text-xs text-cocoa/60">Carved &amp; bespoke</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wider text-cocoa/50">Margin</dt>
+              <dd class="mt-1 font-display text-3xl text-crust">Art</dd>
+              <dd class="text-xs text-cocoa/60">Not commodity fruit</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="relative reveal">
+          <div class="animate-float relative overflow-hidden rounded-card bg-surface p-3 shadow-luxe-lg">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=1200&amp;q=80&amp;auto=format&amp;fit=crop" alt="Belgian chocolate–dipped berries, edible sculpture" class="h-[420px] w-full rounded-[22px] object-cover md:h-[480px]" width="900" height="480" loading="eager" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+            <div class="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-3 rounded-card glass px-5 py-4 shadow-luxe">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-cocoa/50">Signature</p>
+                <p class="font-display text-2xl text-cocoa">Dipped Botanical Bloom</p>
+              </div>
+              <span class="rounded-pill bg-emerald-500/15 px-4 py-2 text-xs font-bold text-emerald-800">Gift-ready</span>
+            </div>
+          </div>
+          <div class="absolute -right-4 top-8 hidden w-48 rounded-card bg-surface p-4 shadow-luxe-lg md:block">
+            <p class="text-xs font-semibold text-cocoa/50">Live tracker</p>
+            <div class="mt-3 flex items-center gap-2">
+              <div class="dot-pulse flex gap-1.5">
+                <span class="h-2 w-2 rounded-full bg-crust"></span>
+                <span class="h-2 w-2 rounded-full bg-crust"></span>
+                <span class="h-2 w-2 rounded-full bg-crust"></span>
+              </div>
+              <span class="text-sm font-medium text-cocoa">Crafting…</span>
+            </div>
+            <div class="mt-4 h-2 overflow-hidden rounded-pill bg-glow">
+              <div class="h-full w-2/3 rounded-pill bg-gradient-to-r from-crust to-cocoa/60"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="border-t border-cocoa/5 bg-white/40 px-5 py-24 md:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-14 max-w-2xl">
+          <h2 class="font-display text-4xl text-cocoa md:text-5xl">The guest journey</h2>
+          <p class="mt-4 text-lg text-cocoa/70">Every order ships as a <strong class="font-semibold text-cocoa">floral fruit bouquet</strong>—vibrant, viral-ready, and priced on artistry. The same soft UI carries from browse to checkout to the fulfillment floor.</p>
+        </div>
+        <div class="no-scrollbar -mx-5 flex gap-4 overflow-x-auto px-5 pb-2 md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
+          <button type="button" class="shrink-0 rounded-pill bg-cocoa px-6 py-2.5 text-sm font-semibold text-cream shadow-luxe">All</button>
+          <button type="button" class="shrink-0 rounded-pill bg-white px-6 py-2.5 text-sm font-semibold text-cocoa/70 shadow-luxe transition hover:scale-[1.02]">Bouquets</button>
+          <button type="button" class="shrink-0 rounded-pill bg-white px-6 py-2.5 text-sm font-semibold text-cocoa/70 shadow-luxe transition hover:scale-[1.02]">Platters</button>
+          <button type="button" class="shrink-0 rounded-pill bg-white px-6 py-2.5 text-sm font-semibold text-cocoa/70 shadow-luxe transition hover:scale-[1.02]">Seasonal</button>
+        </div>
+        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal overflow-hidden rounded-card bg-surface shadow-luxe transition hover:shadow-luxe-lg">
+            <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Colourful fresh fruit platter" class="h-full w-full object-cover" width="600" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+              <span class="absolute left-4 top-4 rounded-pill bg-emerald-500/90 px-3 py-1 text-xs font-bold text-white shadow-luxe">Spotlight · 2h</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Spotlight platter</h3>
+              <p class="mt-2 text-sm text-cocoa/65">Curated seasonal fruit, fast city delivery—perfect for same-day gifting.</p>
+              <p class="mt-4 font-display text-2xl text-crust">from ₹1,299</p>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-card bg-surface shadow-luxe transition hover:shadow-luxe-lg">
+            <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Fruit bouquet arrangement" class="h-full w-full object-cover" width="600" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+              <span class="absolute left-4 top-4 rounded-pill bg-amber-500/95 px-3 py-1 text-xs font-bold text-white shadow-luxe">Pre-Book · 24h</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Carved &amp; architectural</h3>
+              <p class="mt-2 text-sm text-cocoa/65">Precision carving and composed bouquets—lead time enforced in checkout.</p>
+              <p class="mt-4 font-display text-2xl text-crust">from ₹2,499</p>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-card bg-surface shadow-luxe transition hover:shadow-luxe-lg sm:col-span-2 lg:col-span-1">
+            <div class="relative h-56">
+              <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Fresh apples and orchard fruit" class="h-full w-full object-cover" width="600" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+              <span class="absolute left-4 top-4 rounded-pill bg-crust/95 px-3 py-1 text-xs font-bold text-white shadow-luxe">BYO Bloom</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Build-Your-Own-Bloom</h3>
+              <p class="mt-2 text-sm text-cocoa/65">Vase or platter, fruit, Belgian dip, adornments—circular selectors, live total.</p>
+              <p class="mt-4 font-display text-2xl text-crust">from ₹899</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" class="px-5 py-24 md:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-14 text-center">
+          <h2 class="font-display text-4xl text-cocoa md:text-5xl">One platform, four views</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-cocoa/70">Shared order state: what the customer configures is exactly what prep and dispatch see—Spotlight (2h) vs carved botanical work (24h) enforced by product rules.</p>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="reveal rounded-card bg-surface p-8 shadow-luxe-lg lg:col-span-2">
+            <div class="flex flex-col gap-8 lg:flex-row lg:items-center">
+              <div class="flex-1">
+                <span class="text-xs font-bold uppercase tracking-widest text-crust">Hero · Build-Your-Own-Bloom</span>
+                <h3 class="mt-2 font-display text-3xl text-cocoa">Base, fruit, dip, adornments</h3>
+                <p class="mt-3 text-cocoa/70">Guests choose <strong class="font-medium text-cocoa">vase vs platter</strong>, then <strong class="font-medium text-cocoa">strawberries, melons, grapes</strong>, then <strong class="font-medium text-cocoa">dark, white, or milk Belgian chocolate</strong>, then <strong class="font-medium text-cocoa">gold flakes, nuts, sprinkles, custom candles</strong>. Circular thumbnails, gold ring on select, frosted running total.</p>
+              </div>
+              <div class="flex flex-1 flex-wrap justify-center gap-4 lg:justify-end">
+                <button type="button" class="demo-ring flex h-20 w-20 scale-110 overflow-hidden rounded-full border-4 border-crust bg-glow shadow-luxe transition">
+                  <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=240&amp;h=240&amp;q=80&amp;auto=format&amp;fit=crop" alt="Strawberries and berries" class="h-full w-full object-cover" width="80" height="80" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+                </button>
+                <button type="button" class="flex h-20 w-20 overflow-hidden rounded-full border-4 border-transparent bg-glow shadow-luxe transition hover:scale-[1.05]">
+                  <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=240&amp;h=240&amp;q=80&amp;auto=format&amp;fit=crop" alt="Belgian chocolate dip" class="h-full w-full object-cover" width="80" height="80" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+                </button>
+                <button type="button" class="flex h-20 w-20 overflow-hidden rounded-full border-4 border-transparent bg-glow shadow-luxe transition hover:scale-[1.05]">
+                  <img src="https://images.unsplash.com/photo-1548848221-0c2e497ed557?w=240&amp;h=240&amp;q=80&amp;auto=format&amp;fit=crop" alt="Sprinkles and toppings" class="h-full w-full object-cover" width="80" height="80" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" />
+                </button>
+              </div>
+            </div>
+            <div class="mt-8 rounded-card border border-cocoa/5 bg-cream/80 px-6 py-4 glass">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wider text-cocoa/50">Running total</p>
+                  <p class="font-display text-3xl text-cocoa">₹15,450</p>
+                </div>
+                <button type="button" class="rounded-pill bg-cocoa px-10 py-3 text-sm font-semibold text-cream shadow-luxe transition hover:scale-[1.02]">Next step</button>
+              </div>
+            </div>
+          </div>
+          <div class="reveal rounded-card bg-surface p-8 shadow-luxe">
+            <span class="text-xs font-bold uppercase tracking-widest text-crust">Checkout</span>
+            <h3 class="mt-2 font-display text-2xl text-cocoa">Split summary &amp; delivery</h3>
+            <p class="mt-3 text-sm text-cocoa/70">Line-item clarity for investors and ops. Calendar logic: <strong class="font-medium text-cocoa">Spotlight</strong> slots for rapid platter windows; <strong class="font-medium text-cocoa">24h carve</strong> blocks same-day for bespoke botanical work.</p>
+            <ul class="mt-6 space-y-2 text-sm">
+              <li class="flex justify-between rounded-2xl bg-glow/50 px-4 py-3"><span>Ceramic vase · Medium</span><span class="font-medium">incl.</span></li>
+              <li class="flex justify-between rounded-2xl bg-glow/50 px-4 py-3"><span>Strawberries · Melon · Grapes</span><span class="font-medium">incl.</span></li>
+              <li class="flex justify-between rounded-2xl bg-glow/50 px-4 py-3"><span>Dark Belgian dip · Gold flake · Nuts · Candle</span><span class="font-medium text-crust">+₹2,850</span></li>
+            </ul>
+          </div>
+          <div class="reveal rounded-card bg-surface p-8 shadow-luxe">
+            <span class="text-xs font-bold uppercase tracking-widest text-crust">Live tracking</span>
+            <h3 class="mt-2 font-display text-2xl text-cocoa">Received → Crafting → Out for delivery</h3>
+            <p class="mt-3 text-sm text-cocoa/70">Three-pulse progress—dip, arrange, dispatch—so gift recipients trust the handoff.</p>
+            <div class="mt-8 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-crust text-sm font-bold text-white">1</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-pill bg-glow"><div class="h-full w-full rounded-pill bg-crust"></div></div>
+                <span class="text-xs font-semibold text-cocoa/60">Received</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-full bg-crust text-sm font-bold text-white">2</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-pill bg-glow"><div class="h-full w-3/5 rounded-pill bg-crust"></div></div>
+                <span class="text-xs font-semibold text-cocoa/60">Crafting</span>
+              </div>
+              <div class="flex items-center gap-3 opacity-40">
+                <span class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-cocoa/20 text-sm font-bold">3</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-pill bg-glow"></div>
+                <span class="text-xs font-semibold text-cocoa/60">On the way</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kds" class="relative overflow-hidden border-t border-cocoa/5 bg-gradient-to-b from-glow/40 via-cream to-cream px-5 py-24 md:px-8">
+      <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-crust/20 to-transparent" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-20 top-1/4 h-72 w-72 rounded-full bg-crust/10 blur-3xl" aria-hidden="true"></div>
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <p class="text-xs font-bold uppercase tracking-widest text-crust">Fulfillment board</p>
+            <h2 class="font-display text-4xl text-cocoa md:text-5xl">Big type, one-tap lanes</h2>
+            <p class="mt-4 text-lg text-cocoa/70">Same soft cards and pill actions as the storefront—optimised for iPad at arm’s length. Colour strips echo urgency; the live tracker moves when a ticket advances.</p>
+          </div>
+          <span class="inline-flex w-fit rounded-pill border border-cocoa/8 bg-surface px-5 py-2.5 text-sm font-medium text-cocoa/75 shadow-luxe">3 columns · Incoming → Prep → Out</span>
+        </div>
+        <div class="reveal grid gap-8 lg:grid-cols-3">
+          <div class="rounded-card border border-cocoa/[0.06] border-l-4 border-l-red-400 bg-surface p-7 shadow-luxe-lg transition hover:shadow-luxe">
+            <p class="text-xs font-bold uppercase tracking-wider text-cocoa/45">Incoming</p>
+            <p class="mt-2 text-sm font-semibold tabular-nums text-crust">#1042 · Spotlight 2h</p>
+            <p class="mt-5 text-2xl font-bold leading-tight text-cocoa">Large fruit platter</p>
+            <ul class="mt-5 space-y-2.5 text-lg font-semibold leading-snug text-cocoa/90">
+              <li>· No dip · Ribbon gift</li>
+              <li>· Banjara Hills drop</li>
+            </ul>
+            <button type="button" class="mt-8 w-full rounded-pill bg-crust py-3.5 text-sm font-bold text-white shadow-luxe transition hover:scale-[1.02] active:scale-[0.98]">Start prep →</button>
+          </div>
+          <div class="rounded-card border border-cocoa/[0.06] border-l-4 border-l-amber-500 bg-surface p-7 shadow-luxe-lg transition hover:shadow-luxe">
+            <p class="text-xs font-bold uppercase tracking-wider text-cocoa/45">Dip &amp; arrange</p>
+            <p class="mt-2 text-sm font-semibold tabular-nums text-amber-800">#1038 · 24h carve</p>
+            <p class="mt-5 text-2xl font-bold leading-tight text-cocoa">BYO Bloom · Vase</p>
+            <ul class="mt-5 space-y-2.5 text-xl font-bold leading-snug text-cocoa">
+              <li>· Strawberries · Melon</li>
+              <li>· Dark Belgian</li>
+              <li>· Gold flake · Pistachio</li>
+              <li>· Custom candle</li>
+            </ul>
+            <button type="button" class="mt-8 w-full rounded-pill border-2 border-cocoa/15 bg-cream/80 py-3.5 text-sm font-bold text-cocoa shadow-luxe transition hover:scale-[1.02] hover:border-cocoa/25 hover:bg-glow/50 active:scale-[0.98]">Ready for dispatch →</button>
+          </div>
+          <div class="rounded-card border border-cocoa/[0.06] border-l-4 border-l-emerald-500 bg-surface p-7 shadow-luxe-lg transition hover:shadow-luxe">
+            <p class="text-xs font-bold uppercase tracking-wider text-cocoa/45">Out / Handoff</p>
+            <p class="mt-2 text-sm font-semibold tabular-nums text-emerald-800">#1035</p>
+            <p class="mt-5 text-2xl font-bold leading-tight text-cocoa">Dipped botanical bouquet</p>
+            <ul class="mt-5 space-y-2.5 text-lg font-semibold leading-snug text-cocoa/90">
+              <li>· Cold chain bag</li>
+              <li>· Driver en route</li>
+            </ul>
+            <button type="button" class="mt-8 w-full rounded-pill bg-cocoa py-3.5 text-sm font-bold text-cream shadow-luxe transition hover:scale-[1.02] active:scale-[0.98]">Delivered ✓</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="px-5 py-24 md:px-8">
+      <div class="mx-auto max-w-4xl text-center reveal">
+        <h2 class="font-display text-4xl text-cocoa md:text-5xl">Premium on the artistry, not the commodity</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-cocoa/70">Berry Blooms sells <strong class="font-semibold text-cocoa">perceived value</strong>: a box of berries is inexpensive—a dipped, carved, gift-wrapped botanical bloom is a statement. The stack (storefront, Build-Your-Own-Bloom, checkout with 2h vs 24h rules, live tracking, fulfillment board) is built to scale that story in Hyderabad and beyond.</p>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="mailto:hello@berryblooms.in" class="rounded-pill bg-crust px-10 py-4 text-sm font-semibold text-white shadow-luxe-lg transition hover:scale-[1.02]">Start a conversation</a>
+          <a href="#experience" class="rounded-pill border border-cocoa/15 bg-white px-10 py-4 text-sm font-semibold text-cocoa shadow-luxe transition hover:scale-[1.02]">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-cocoa/10 bg-white/60 px-5 py-10 text-center text-sm text-cocoa/55 md:px-8">
+    <p class="font-display text-2xl text-cocoa">Berry Blooms</p>
+    <p class="mt-2">Fruit artistry &amp; edible sculptures · Hyderabad · Ravali Cherukuri, Founder</p>
+  </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+      );
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
