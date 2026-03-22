@@ -1,4 +1,6 @@
 {
+  "installCommand": "echo 'Static site — skip npm install'",
+  "buildCommand": "echo 'Static site — skip compile'",
   "headers": [
     {
       "source": "/(.*)",
